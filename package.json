@@ -2,10 +2,6 @@
   "name": "reax-avatar",
   "version": "1.0.0",
   "description": "Avatar component for React",
-  "main": "index.js",
-  "scripts": {
-    "prepublish": "./node_modules/.bin/babel --presets es2015,react index.babel.js -o index.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luizeduard0/reax-avatar.git"
@@ -21,6 +17,9 @@
     "url": "https://github.com/luizeduard0/reax-avatar/issues"
   },
   "homepage": "https://github.com/luizeduard0/reax-avatar#readme",
+  "scripts": {
+    "prepublish": "./node_modules/.bin/babel --presets es2015,react index.babel.js -o index.js"
+  },
   "dependencies": {
     "react": "^0.14.3"
   },
