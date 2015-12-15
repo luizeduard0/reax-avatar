@@ -1,6 +1,6 @@
 # Reax Avatar
 
-Avatar component for React
+Avatar component for React that displays an avatar with initials based on user's name.
 
 ## PropTypes
 
