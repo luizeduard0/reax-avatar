@@ -14,7 +14,7 @@ Avatar component for React
 
 ## Usage
 ```sh
-npm install --save @luizeduard0/reax-avatar
+npm install --save reax-avatar
 ```
 
 ```jsx
