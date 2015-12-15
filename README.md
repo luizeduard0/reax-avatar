@@ -2,10 +2,6 @@
 
 Avatar component for React
 
-# Reax Alert
-
-Bootstrap Alert component for React
-
 ## PropTypes
 
 ```js
