@@ -2,6 +2,8 @@
 
 Avatar component for React that displays an avatar with initials based on user's name.
 
+[![npm version](https://badge.fury.io/js/reax-avatar.svg)](https://badge.fury.io/js/reax-avatar)
+
 ## PropTypes
 
 ```js
