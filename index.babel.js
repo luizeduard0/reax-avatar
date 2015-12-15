@@ -77,12 +77,12 @@ class Avatar extends React.Component{
             width: this.props.width,
             height: this.props.height,
             display: 'inline-block',
-            'font-size': '130%',
-            'letter-spacing': '-.4px',
-            'font-weight': 'bold',
-            'border-radius': '5px',
-            'text-align': 'center',
-            'line-height': '200%',
+            'fontSize': '130%',
+            'letterSpacing': '-.4px',
+            'fontWeight': 'bold',
+            'borderRadius': '5px',
+            'textAlign': 'center',
+            'lineHeight': '200%',
             'overflow': 'none'
           }}
           className={`avatar letter-${this.state.avatar.firstLetter}`}>
