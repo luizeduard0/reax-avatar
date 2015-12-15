@@ -80,7 +80,7 @@ class Avatar extends React.Component{
             'fontSize': '130%',
             'letterSpacing': '-.4px',
             'fontWeight': 'bold',
-            'borderRadius': '5px',
+            'borderRadius': '2px',
             'textAlign': 'center',
             'lineHeight': '200%',
             'overflow': 'none'
