@@ -1,0 +1,32 @@
+{
+  "name": "reax-avatar",
+  "version": "1.0.0",
+  "description": "Avatar component for React",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "./node_modules/.bin/babel --presets es2015,react index.babel.js -o index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luizeduard0/reax-avatar.git"
+  },
+  "keywords": [
+    "avatar",
+    "react",
+    "component"
+  ],
+  "author": "Luiz Eduardo Rodrigues <luiz@divisio.com.br> (https://github.com/luizeduard0/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luizeduard0/reax-avatar/issues"
+  },
+  "homepage": "https://github.com/luizeduard0/reax-avatar#readme",
+  "dependencies": {
+    "react": "^0.14.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.3.17",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13"
+  }
+}
