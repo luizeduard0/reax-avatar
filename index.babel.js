@@ -1,19 +1,8 @@
 import React from 'react';
 
 class Avatar extends React.Component{
-
-  constructor(){
-    super();
-    this.state = {
-        avatar: {
-          initials: '',
-          firstLetter: ''
-        }
-    };
-  }
-
-  colors(letter='default'){
-    const Colors = {
+  getColors(letter='default'){
+    const colors = {
         'a': { background: '#f06292', color: '#f9c2d5' },
         'b': { background: '#ba68c8', color: '#e1bee7' },
         'c': { background: '#9575cd', color: '#d1c4e9' },
@@ -39,54 +28,57 @@ class Avatar extends React.Component{
         'x': { background: '#80deea', color: '#e9f9fb' },
         'y': { background: '#bcaaa4', color: '#e7e0de' },
         'z': { background: '#aed581', color: '#dcedc8' },
+        'w': { background: '#9575cd', color: '#d1c4e9' },
         'default': { background: '#eee', color: '#666' },
-
       };
-
-      return Colors[letter] ? Colors[letter] : Colors['default'];
+      return colors[letter];
   }
-
-
-  componentDidMount(){
-    this.setState({ avatar: this.avatar() });
-  }
-
-  avatar(){
+  getAvatar(){
     const words = this.props.name.split(' ');
+    const firstWord = words[0];
+    const firstLetter = firstWord[0];
     if(words.length > 1){
-      const second_word = (words[1].length <= 3 && typeof words[2] != 'undefined') ? words[2] : words[1];
+      const secondWord = (words[1].length <= 3 && typeof words[2] != 'undefined') ? words[2] : words[1];
+      const secondLetter = secondWord[0];
       return {
-        firstLetter: words[0][0].toLowerCase(),
-        initials: words[0][0]+second_word[0].toUpperCase()
+        firstLetter: firstLetter.toLowerCase(),
+        initials: firstLetter+secondLetter.toUpperCase()
       }
     } else {
+      const secondLetter = firstWord[1];
       return {
-        firstLetter: words[0][0].toLowerCase(),
-        initials: words[0][0]+second_word[0][1].toUpperCase()
+        firstLetter: firstLetter.toLowerCase(),
+        initials: firstLetter+secondLetter.toUpperCase()
       }
     }
   }
-
   render(){
-
+    const {
+      firstLetter,
+      initials
+    } = this.getAvatar();
+    const {
+      color,
+      background
+    } = this.getColors(firstLetter);
     return (
       <div
           style={{
-            background:this.colors(this.state.avatar.firstLetter).background,
-            color: this.colors(this.state.avatar.firstLetter).color,
+            background,
+            color,
             width: this.props.width,
             height: this.props.height,
             display: 'inline-block',
-            'fontSize': '130%',
-            'letterSpacing': '-.4px',
-            'fontWeight': 'bold',
-            'borderRadius': '2px',
-            'textAlign': 'center',
-            'lineHeight': '200%',
-            'overflow': 'none'
+            fontSize: '130%',
+            letterSpacing: '-.4px',
+            fontWeight: 'bold',
+            borderRadius: '5px',
+            textAlign: 'center',
+            lineHeight: '200%',
+            overflow: 'none'
           }}
-          className={`avatar letter-${this.state.avatar.firstLetter}`}>
-          {this.state.avatar.initials}
+          className="avatar">
+          {initials}
       </div>
     )
   }
