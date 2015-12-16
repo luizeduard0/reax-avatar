@@ -29,7 +29,7 @@ class Avatar extends React.Component{
         y : { background: '#bcaaa4', color: '#e7e0de' },
         z : { background: '#aed581', color: '#dcedc8' },
         w : { background: '#9575cd', color: '#d1c4e9' },
-        'default': { background: '#eee', color: '#666' },
+        default : { background: '#eee', color: '#666' },
       };
       return colors[letter];
   }
@@ -70,13 +70,13 @@ class Avatar extends React.Component{
           style={{
             background,
             color,
-            width: width,
-            height: height,
+            width,
+            height,
             display: 'inline-block',
             fontSize: '130%',
-            letterSpacing: '-.4px',
+            letterSpacing: -.4,
             fontWeight: 'bold',
-            borderRadius: '5px',
+            borderRadius: 5,
             textAlign: 'center',
             lineHeight: '200%',
             overflow: 'none'
