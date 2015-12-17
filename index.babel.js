@@ -65,6 +65,13 @@ class Avatar extends React.Component{
       width,
       height
     } = this.props;
+
+    const fontSize = (width) => {
+        return (width / 30)+' em';
+    }
+
+    console.log(fontSize(width));
+
     return (
       <div
           style={{
@@ -73,16 +80,24 @@ class Avatar extends React.Component{
             width,
             height,
             display: 'inline-block',
-            fontSize: '130%',
             letterSpacing: -.4,
             fontWeight: 'bold',
             borderRadius: 5,
             textAlign: 'center',
-            lineHeight: '200%',
-            overflow: 'none'
+            overflow: 'none',
+            textTransform: 'uppercase',
+            padding: '5% 0',
+            overflow: 'hidden',
+            fontSize: width / 30+'em',
+            boxShadow: 'rgba(0,0,0,.2) 0px 2px 3px'
+
           }}
           className="avatar">
-          {initials}
+          <div style={{
+              padding: '10% 0',
+            }}>
+            {initials}
+          </div>
       </div>
     )
   }
@@ -95,8 +110,8 @@ Avatar.propTypes = {
 }
 
 Avatar.defaultProps = {
-  width: 35,
-  height: 35
+  width: 30,
+  height: 30
 }
 
 export default Avatar;
