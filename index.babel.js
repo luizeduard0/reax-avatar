@@ -67,10 +67,8 @@ class Avatar extends React.Component{
     } = this.props;
 
     const fontSize = (width) => {
-        return (width / 30)+' em';
+        return (width / 30)+'em';
     }
-
-    console.log(fontSize(width));
 
     return (
       <div
@@ -88,7 +86,7 @@ class Avatar extends React.Component{
             textTransform: 'uppercase',
             padding: '5% 0',
             overflow: 'hidden',
-            fontSize: width / 30+'em',
+            fontSize: fontSize(width),
             boxShadow: 'rgba(0,0,0,.2) 0px 2px 3px'
 
           }}
